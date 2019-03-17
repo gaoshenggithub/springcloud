@@ -1,0 +1,12 @@
+server:
+  port: 10100
+eureka:
+  instance:
+    hostname: eureka10100.com
+  client:
+    register-with-eureka: false #禁止eureka将自己注册
+    fetch-registry: false #只允许eureka进行管理,不允许检索
+    service-url:
+      defaultZone: http://eureka10101.com:10101/eureka/,http://eureka10102.com:10102/eureka
+     #注册单个注册中心是使用下面的方式
+      #http://${eureka.instance.hostname}:${server.port}/eureka/      

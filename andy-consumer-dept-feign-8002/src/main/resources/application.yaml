@@ -1,0 +1,13 @@
+server:
+  port: 9999
+ 
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka10100.com:10100/eureka/,http://eureka10101.com:10101/eureka/,http://eureka10102.com:10102/eureka/  
+      
+feign:
+  hystrix:
+    enabled: true      
+    #此表示在FeignClientsConfiguration
