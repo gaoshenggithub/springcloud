@@ -93,5 +93,6 @@
 		<module>andy-eureka-10102</module>
 		<module>andy-consumer-dept-feign-8002</module>
 		<module>andy-provider-dept-8001-hystrix</module>
+		<module>andy-consumer-hystrix-dashboard</module>
 	</modules>
 </project>

@@ -39,6 +39,11 @@ public class DeptController {
 		return restTemplate.getForObject(REQUEST_URL_TEMP + "/provider/dept/list", List.class);
 	}*/
 	
+	@GetMapping(value = "/provider/dept/get/{id}")
+	public Dept get(@PathVariable("id")String id){
+		return serviceFeginClient.get(id);
+	}
+	
 	@GetMapping(value = "/consumner/dept/list2")
 	public String list2(){
 		return serviceFeginClient.discover();

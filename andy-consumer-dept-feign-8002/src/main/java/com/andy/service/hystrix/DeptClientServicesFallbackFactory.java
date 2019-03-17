@@ -2,6 +2,7 @@ package com.andy.service.hystrix;
 
 import org.springframework.stereotype.Component;
 
+import com.andy.model.Dept;
 import com.andy.service.ServiceFeginClient;
 
 import feign.hystrix.FallbackFactory;
@@ -15,6 +16,11 @@ public class DeptClientServicesFallbackFactory implements FallbackFactory<Servic
 			@Override
 			public String discover() {
 				return "服务暂停";
+			}
+
+			@Override
+			public Dept get(String id) {
+				return new Dept().setDb_source("sdf");
 			}
 		};
 	}

@@ -2,17 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.andy.mapper.DeptMapper">
+<mapper namespace="com.gaosheng.springcloud.dao.DeptDao">
 	<!-- 查询所有的数据 -->
 	<select id = "findAll" resultType="Dept">
 		select deptno,dname,db_source from dept  
 	</select>
 	
 	<!-- 根据Id查询数据部门 -->
-	<select id = "getIdByDept"  parameterType="Long" resultType="Dept">
-		SELECT deptno my_deptno,
-			   dname my_dname,
-		       db_source my_db_source 
+	<select id = "getIdByDept"  parameterType="String" resultType="Dept">
+		SELECT deptno ,
+			   dname ,
+		       db_source  
 		FROM 
 			dept 
 		WHERE 

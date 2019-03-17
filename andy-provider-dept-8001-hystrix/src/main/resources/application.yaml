@@ -30,7 +30,7 @@ eureka:
     service-url:
       defaultZone: http://eureka10100.com:10100/eureka,http://eureka10101.com:10101/eureka,http://eureka10102.com:10102/eureka
   instance:
-    instance-id: haode
+    instance-id: 美好
     prefer-ip-address: true
     
 info:
